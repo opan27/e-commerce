@@ -56,7 +56,7 @@ class LoginRegisterFeController extends Controller
         ]);
 
 
-        Mail::to($request->email)->send(new SendEmailAfterRegist($request->email,$request->password, $request->name));
+        // Mail::to($request->email)->send(new SendEmailAfterRegist($request->email,$request->password, $request->name));
         return redirect('login-user')->with('message', 'Successfully  Register, Check Your Email To See Credential Login');
     }
 
